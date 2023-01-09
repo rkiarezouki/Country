@@ -40,7 +40,7 @@ public class CityRepositoryTest {
 
     @Test
     // L'entity "City" définit une contrainte sur la taille minimum du nom des villes
-    void onVerifieLesContraintesDeValidation() {
+    void onVerinfieLesContraintesDeValidatio() {
         log.info("On vérifie que Spring honore les contraintes de validation");
         City city = new City();
         city.setName("P"); // Ce nom est trop court,  @Size(min = 2) dans City.java
