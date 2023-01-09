@@ -42,5 +42,14 @@ public class CountryRepositoryTest {
         long nombre = countryDAO.count();
         assertEquals(combienDePaysDansLeJeuDeTest, nombre, "On doit trouver 4 pays" );
     }
+    @Test
+    @Sql("test-data-sql")
+    void OnSaitLaPopulationDeChaquePays(){
+        List<PopulationParPays> populationParPays = countryDAO.populationParPays();
+        assertEquals("France", populationParPays.get(0).getPays());
+        assertEquals(18, populationParPays.get(1).getPopulation());
+    }
+
+
 
 }
